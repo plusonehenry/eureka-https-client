@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: eureka-client-b
+server:
+  port: 8082
+  ssl:
+    enabled: true
+    key-alias: client
+    key-store: classpath:client.keystore
+    key-store-type: JKS
+    key-store-password: 123456
+    trust-store: classpath:trustStore.keystore
+    trust-store-type: JKS
+    trust-store-password: 123456
+eureka:
+  client:
+    tls:
+      enabled: true
+      key-store: classpath:client.keystore
+      key-store-type: JKS
+      key-store-password: 123456
+      key-password: 123456
+      trust-store: classpath:trustStore.keystore
+      trust-store-type: JKS
+      trust-store-password: 123456
+    service-url:
+      defaultZone: https://admin123:12345678@localhost:8000/eureka
+  instance:
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    prefer-ip-address: true
