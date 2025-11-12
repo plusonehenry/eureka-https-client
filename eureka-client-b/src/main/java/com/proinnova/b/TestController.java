@@ -19,6 +19,6 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        return "eureka-client-a的test接口返回：" + restTemplate.getForObject("http://eureka-client-a/test", String.class);
+        return "eureka-client-a的test接口返回：" + restTemplate.getForObject("https://eureka-client-a/test", String.class);
     }
 }

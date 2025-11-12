@@ -9,17 +9,18 @@ server:
     key-store: classpath:client.keystore
     key-store-type: JKS
     key-store-password: 123456
-    trust-store: classpath:trustStore.keystore
-    trust-store-type: JKS
-    trust-store-password: 123456
+    client-auth: none
+#    trust-store: classpath:trustStore.keystore
+#    trust-store-type: JKS
+#    trust-store-password: 123456
 eureka:
   client:
     tls:
       enabled: true
-      key-store: classpath:client.keystore
-      key-store-type: JKS
-      key-store-password: 123456
-      key-password: 123456
+#      key-store: classpath:client.keystore
+#      key-store-type: JKS
+#      key-store-password: 123456
+#      key-password: 123456
       trust-store: classpath:trustStore.keystore
       trust-store-type: JKS
       trust-store-password: 123456
@@ -29,3 +30,4 @@ eureka:
     secure-port-enabled: true
     non-secure-port-enabled: false
     prefer-ip-address: true
+    hostname: localhost
